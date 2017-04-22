@@ -1,4 +1,11 @@
 # Nyancat Telnet Server
+
+[![Docker Stars](https://img.shields.io/docker/stars/ddhhz/nyancat-server.svg)](https://hub.docker.com/r/ddhhz/nyancat-server/)
+[![Docker Pulls](https://img.shields.io/docker/pulls/ddhhz/nyancat-server.svg)](https://hub.docker.com/r/ddhhz/nyancat-server/)
+[![Docker Build](https://img.shields.io/docker/build/ddhhz/nyancat-server.svg)](https://hub.docker.com/r/ddhhz/nyancat-server/builds/)
+[![ImageLayers Size](https://img.shields.io/imagelayers/image-size/ddhhz/nyancat-server/latest.svg)](http://imagelayers.io/?images=ddhhz/nyancat-server:latest)
+[![ImageLayers Layers](https://img.shields.io/imagelayers/layers/ddhhz/nyancat-server/latest.svg)](http://imagelayers.io/?images=ddhhz/nyancat-server:latest)
+
 Docker Image for a nyancat telnet server.
 
 
