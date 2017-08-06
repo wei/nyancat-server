@@ -5,6 +5,13 @@
 Docker Image for a nyancat telnet server.
 
 
+## Demo
+
+```bash
+$ telnet nyancat.whe.me
+```
+
+
 ## Usage
 
 ### Telnet Server
@@ -37,4 +44,4 @@ View `onenetd` help document by running `$ docker exec nyancat-server sh -c "one
 
 
 ## Author
-Wei He <docker@weispot.com>
+[**Wei He**](https://whe.me)  [_&#103;&#105;&#116;&#104;&#117;&#098;&#064;&#119;&#101;&#105;&#115;&#112;&#111;&#116;&#046;&#099;&#111;&#109;_](mailto:&#103;&#105;&#116;&#104;&#117;&#098;&#064;&#119;&#101;&#105;&#115;&#112;&#111;&#116;&#046;&#099;&#111;&#109;)
