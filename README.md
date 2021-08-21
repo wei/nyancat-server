@@ -1,57 +1,40 @@
-# Nyancat CLI
+# Nyancat Telnet Server
 
-Nyancat rendered in your terminal.
+[![Docker Stars](https://img.shields.io/docker/stars/ddhhz/nyancat-server.svg)](https://hub.docker.com/r/ddhhz/nyancat-server/) [![Docker Pulls](https://img.shields.io/docker/pulls/ddhhz/nyancat-server.svg)](https://hub.docker.com/r/ddhhz/nyancat-server/) [![Docker Build](https://img.shields.io/docker/build/ddhhz/nyancat-server.svg)](https://hub.docker.com/r/ddhhz/nyancat-server/builds/) [![Docker Image Size and Layers](https://images.microbadger.com/badges/image/ddhhz/nyancat-server.svg)](https://microbadger.com/images/ddhhz/nyancat-server)
 
-[![Nyancats](http://nyancat.dakko.us/nyancat.png)](http://nyancat.dakko.us/nyancat.png)
+Docker Image for a nyancat telnet server.
 
-## Distributions
 
-Nyancat is available in the following distributions:
+## Usage
 
-- [Arch](https://www.archlinux.org/packages/?q=nyancat)
-- [Debian](http://packages.qa.debian.org/n/nyancat.html)
-- [Fedora](https://src.fedoraproject.org/rpms/nyancat)
-- [Gentoo](http://packages.gentoo.org/package/games-misc/nyancat)
-- [Mandriva](http://sophie.zarb.org/rpms/928724d4aea0efdbdeda1c80cb59a7d3)
-- [Ubuntu](https://launchpad.net/ubuntu/+source/nyancat)
+### Telnet Server
+```bash
+$ docker run -d --name nyancat-server --restart=always -p 23:23 ddhhz/nyancat-server
+```
 
-And also on some BSD systems:
+##### To view:
+```bash
+$ telnet <localhost or serverhost>
+```
 
-- [FreeBSD](http://www.freshports.org/net/nyancat/)
-- [OpenBSD](http://openports.se/misc/nyancat)
-- [NetBSD](http://pkgsrc.se/misc/nyancat)
+### View Locally, aka show me the cat
+```bash
+$ docker run -d --name nyancat-local ddhhz/nyancat-server
 
-## Setup
+$ docker exec -it nyancat-local nyancat
+```
 
-First build the C application:
 
-    make && cd src
+## Using
 
-You can run the C application standalone.
+### [klange/nyancat](https://github.com/klange/nyancat)
+Checkout 「[Nyan Cat Telnet Server](http://nyancat.dakko.us/)」 project homepage for demos.
 
-    ./nyancat
+### [atsampson/onenetd](https://github.com/atsampson/onenetd)
+> By default, 40 connections are allowed at once.
 
-To use the telnet server, you need to add a configuration that runs:
+View `onenetd` help document by running `$ docker exec nyancat-server sh -c "onenetd -h"`
 
-    nyancat -t
 
-We recommend `openbsd-inetd`, but both `xinetd` and `systemd` work as well. You
-should be able to use any other compatible `inetd` flavor too.
-
-## Distribution Specific Information
-
-#### Debian/Ubuntu
-
-Debian and Ubuntu provide the nyancat binary through the `nyancat` package. A
-`nyancat-server` package is provided to automatically setup and enable a nyancat
-telnet server upon installation. I am not the maintainer of these packages;
-please direct any questions or bugs to the relevant distribution's bug tracking
-system.
-
-## Licenses, References, etc.
-
-The original source of the Nyancat animation is
-[prguitarman](http://www.prguitarman.com/index.php?id=348).
-
-The code provided here is provided under the terms of the
-[NCSA license](http://en.wikipedia.org/wiki/University_of_Illinois/NCSA_Open_Source_License).
+## Author
+[**Wei He**](https://whe.me)  [_&#103;&#105;&#116;&#104;&#117;&#098;&#064;&#119;&#101;&#105;&#115;&#112;&#111;&#116;&#046;&#099;&#111;&#109;_](mailto:&#103;&#105;&#116;&#104;&#117;&#098;&#064;&#119;&#101;&#105;&#115;&#112;&#111;&#116;&#046;&#099;&#111;&#109;)
